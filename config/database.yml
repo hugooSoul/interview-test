@@ -25,7 +25,7 @@ production:
   encoding: utf8
   database: ytp-db
   username: postgres
-  password: 
+  password: ytproot
   min_messages: warning
   pool: 5
   timeout: 5000
