@@ -1,0 +1,39 @@
+<% if @user.errors.any? %>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  <% end %>
+<div class="container">
+  <h2 class="text-center">Edit Profile</h2>
+  <p class="text-center info">*Click the field you want to edit</p>
+
+  <div class="sign_up_edit">
+    <div class="field text-center">
+      <%= best_in_place_if current_user==@user, @user, :first_name, :place_holder => "First Name" %>
+    </div>
+
+    <div class="field text-center">
+      <%= best_in_place_if current_user==@user, @user, :second_name, :place_holder => "Middle Name" %>
+    </div>
+
+    <div class="field text-center">
+      <%= best_in_place_if current_user==@user, @user, :first_last_name, :place_holder => "Last Name" %>
+    </div>
+
+    <div class="field text-center">
+      <%= best_in_place_if current_user==@user, @user, :second_last_name, :place_holder => "Second Last Name" %>
+    </div>
+
+    <div class="field text-center">
+      <%= best_in_place_if current_user==@user, @user, :phonenumber, :place_holder => "Phonenumber" %>
+    </div>
+
+    <div class="field text-center">
+      <%= best_in_place_if current_user==@user, @user, :gender, :as => :select, :collection => [["male", 'Male'], ["female", 'Female']], :place_holder => "Gender" %>
+    </div>
+
+    <div class="field text-center">
+      <%= best_in_place_if current_user==@user, @user, :birth_date, :as => :date, :place_holder => "Birth Date" %>
+    </div>
+  </div>
+</div>
