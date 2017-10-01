@@ -6,7 +6,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :second_name,             default: ""
       t.string :first_last_name,         default: ""
       t.string :second_last_name,        default: ""
-      t.datetime :birth_date,            default: ""
+      t.datetime :birth_date
       t.string :gender,                  default: ""
       t.string :phonenumber,             default: ""
 
